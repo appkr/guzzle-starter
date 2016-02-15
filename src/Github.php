@@ -38,7 +38,7 @@ class Github
     public function user($credentials)
     {
         try {
-            $request = new Request('GET', 'users/appkr', [
+            $request = new Request('GET', 'users/' . $credentials['username'], [
                 'debug' => $this->debug,
                 'verify' => 'false',
                 'headers' => [
